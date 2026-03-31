@@ -1,0 +1,58 @@
+package org.learnabstraction;
+//abstract class---> public abstract class className
+//we can't create main method on abstract class
+//we can access these methods only in another class using inheritance
+
+public abstract class Mobiles {
+//	1.concrete method--->which is normal method
+	
+	public void samsung() {
+		System.out.println("this is samsung mobile");
+}
+//2.abstract method--->either in public or in protected
+//accessspecifier accessmodifier(abstract) void method name();
+//also it doesn't have method body
+// we give val only while calling the method
+
+	 protected abstract void iphone();
+	public abstract void vivo();
+	
+}
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+package org.learnabstraction;
+
+public class Laptops extends Mobiles {
+	// it override the unimplemented methods in this class
+	
+	@Override
+	protected void iphone() {
+		System.out.println("this is i phone 17 ");
+		
+	}
+
+	@Override
+	public void vivo() {
+		System.out.println("this is vivo t4x ");
+	}
+	@Override
+	public void samsung() {
+		//System.out.println("samsung");
+		super.samsung();
+	}
+	public static void main(String[] args) {
+		Laptops l = new Laptops();
+		l.iphone();
+		l.vivo();
+		l.samsung();
+	}
+	
+	}
+
+
+
+
