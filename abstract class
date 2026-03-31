@@ -2,7 +2,7 @@ package org.learnabstraction;
 //abstract class---> public abstract class className
 //we can't create main method on abstract class
 //we can access these methods only in another class using inheritance
-
+//class 1
 public abstract class Mobiles {
 //	1.concrete method--->which is normal method
 	
@@ -25,7 +25,7 @@ public abstract class Mobiles {
 
 
 package org.learnabstraction;
-
+// class 2
 public class Laptops extends Mobiles {
 	// it override the unimplemented methods in this class
 	
