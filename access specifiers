@@ -1,0 +1,60 @@
+//package 1
+package org.client;
+//class 1
+public class Client
+{
+	public void clientId() {
+		System.out.println("123456789");
+	}
+	
+
+}
+
+
+
+//package 1
+package org.client;
+// class 2
+public class Employee {
+	
+	public void empName() {
+System.out.println("pradee");
+
+	}
+	//main ----.execution
+	public static void main(String[]args) {
+//		class 2
+		Employee E = new Employee();
+		E.empName();
+		// class 1
+		Client ci = new Client();
+		ci.clientId();		
+	}
+}
+
+
+
+//package 2
+package org.company;
+
+//import pakagename.classname;
+
+import org.client.*;    //*---all classes
+//class 3
+public class Company  {
+	public void companyName() {
+		System.out.println("strive");
+	}
+	public static void main (String[] args) {
+Company c = new Company();
+c.companyName();
+// class 1
+Client ci = new Client();
+ci.clientId();
+
+
+//class 2
+Employee E = new Employee();
+E.empName();
+	}
+}
