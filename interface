@@ -1,0 +1,74 @@
+//interface
+
+package org.learnabstraction;
+
+public interface Courses {
+void java();
+void python();
+}
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+//interface
+
+package org.learnabstraction;
+//contains only abstract methods
+
+import org.studentdetails.Department;
+
+public interface Students {
+	void rollNO();
+	void studentName();
+	void department();
+}
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+// access interface
+package org.learnabstraction;
+
+public class ImplementInterface implements Students, Courses {
+
+	@Override
+	public void java() {
+System.out.println("this is java");
+		
+	}
+
+	@Override
+	public void python() {
+		System.out.println("this is python");
+		
+	}
+
+	@Override
+	public void rollNO() {
+		System.out.println("101");
+		
+	}
+
+	@Override
+	public void studentName() {
+		System.out.println("john");
+	}
+
+	@Override
+	public void department() {
+		System.out.println("IT");
+		
+	}
+	public static void main(String[] args) {
+		//indirect objects
+		Courses c = new ImplementInterface();
+		c.java();
+		c.python();
+		Students s = new ImplementInterface();
+		s.rollNO();
+		s.studentName();
+		s.department();
+	}
+
+}
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
